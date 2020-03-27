@@ -1,0 +1,10 @@
+C:\VisualStudio Projects\ASP.NET Core path\Youtube\Wes Doyle - Forums\LambdaForums\LambdaForums.Data\obj\Debug\netcoreapp3.1\LambdaForums.Data.csprojAssemblyReference.cache
+C:\VisualStudio Projects\ASP.NET Core path\Youtube\Wes Doyle - Forums\LambdaForums\LambdaForums.Data\obj\Debug\netcoreapp3.1\LambdaForums.Data.AssemblyInfoInputs.cache
+C:\VisualStudio Projects\ASP.NET Core path\Youtube\Wes Doyle - Forums\LambdaForums\LambdaForums.Data\obj\Debug\netcoreapp3.1\LambdaForums.Data.AssemblyInfo.cs
+C:\VisualStudio Projects\ASP.NET Core path\Youtube\Wes Doyle - Forums\LambdaForums\LambdaForums.Data\bin\Debug\netcoreapp3.1\LambdaForums.Data.deps.json
+C:\VisualStudio Projects\ASP.NET Core path\Youtube\Wes Doyle - Forums\LambdaForums\LambdaForums.Data\bin\Debug\netcoreapp3.1\LambdaForums.Data.runtimeconfig.json
+C:\VisualStudio Projects\ASP.NET Core path\Youtube\Wes Doyle - Forums\LambdaForums\LambdaForums.Data\bin\Debug\netcoreapp3.1\LambdaForums.Data.runtimeconfig.dev.json
+C:\VisualStudio Projects\ASP.NET Core path\Youtube\Wes Doyle - Forums\LambdaForums\LambdaForums.Data\bin\Debug\netcoreapp3.1\LambdaForums.Data.dll
+C:\VisualStudio Projects\ASP.NET Core path\Youtube\Wes Doyle - Forums\LambdaForums\LambdaForums.Data\bin\Debug\netcoreapp3.1\LambdaForums.Data.pdb
+C:\VisualStudio Projects\ASP.NET Core path\Youtube\Wes Doyle - Forums\LambdaForums\LambdaForums.Data\obj\Debug\netcoreapp3.1\LambdaForums.Data.dll
+C:\VisualStudio Projects\ASP.NET Core path\Youtube\Wes Doyle - Forums\LambdaForums\LambdaForums.Data\obj\Debug\netcoreapp3.1\LambdaForums.Data.pdb

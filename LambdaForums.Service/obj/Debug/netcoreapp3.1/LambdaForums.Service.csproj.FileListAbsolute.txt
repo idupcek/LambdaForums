@@ -1,0 +1,11 @@
+C:\VisualStudio Projects\ASP.NET Core path\Youtube\Wes Doyle - Forums\LambdaForums\LambdaForums.Service\bin\Debug\netcoreapp3.1\LambdaForums.Service.deps.json
+C:\VisualStudio Projects\ASP.NET Core path\Youtube\Wes Doyle - Forums\LambdaForums\LambdaForums.Service\bin\Debug\netcoreapp3.1\LambdaForums.Service.dll
+C:\VisualStudio Projects\ASP.NET Core path\Youtube\Wes Doyle - Forums\LambdaForums\LambdaForums.Service\bin\Debug\netcoreapp3.1\LambdaForums.Service.pdb
+C:\VisualStudio Projects\ASP.NET Core path\Youtube\Wes Doyle - Forums\LambdaForums\LambdaForums.Service\bin\Debug\netcoreapp3.1\LambdaForums.Data.dll
+C:\VisualStudio Projects\ASP.NET Core path\Youtube\Wes Doyle - Forums\LambdaForums\LambdaForums.Service\bin\Debug\netcoreapp3.1\LambdaForums.Data.pdb
+C:\VisualStudio Projects\ASP.NET Core path\Youtube\Wes Doyle - Forums\LambdaForums\LambdaForums.Service\obj\Debug\netcoreapp3.1\LambdaForums.Service.csprojAssemblyReference.cache
+C:\VisualStudio Projects\ASP.NET Core path\Youtube\Wes Doyle - Forums\LambdaForums\LambdaForums.Service\obj\Debug\netcoreapp3.1\LambdaForums.Service.AssemblyInfoInputs.cache
+C:\VisualStudio Projects\ASP.NET Core path\Youtube\Wes Doyle - Forums\LambdaForums\LambdaForums.Service\obj\Debug\netcoreapp3.1\LambdaForums.Service.AssemblyInfo.cs
+C:\VisualStudio Projects\ASP.NET Core path\Youtube\Wes Doyle - Forums\LambdaForums\LambdaForums.Service\obj\Debug\netcoreapp3.1\LambdaForums.Service.csproj.CopyComplete
+C:\VisualStudio Projects\ASP.NET Core path\Youtube\Wes Doyle - Forums\LambdaForums\LambdaForums.Service\obj\Debug\netcoreapp3.1\LambdaForums.Service.dll
+C:\VisualStudio Projects\ASP.NET Core path\Youtube\Wes Doyle - Forums\LambdaForums\LambdaForums.Service\obj\Debug\netcoreapp3.1\LambdaForums.Service.pdb
