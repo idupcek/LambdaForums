@@ -38,6 +38,8 @@ namespace LambdaForums
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
             services.AddScoped<IForum, ForumService>();
+            services.AddScoped<IPost, PostService>();
+
             services.AddControllersWithViews();
             services.AddRazorPages();
         }
