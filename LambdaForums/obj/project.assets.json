@@ -2668,7 +2668,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
-          "LambdaForums.Data": "1.0.0"
+          "LambdaForums.Data": "1.0.0",
+          "Microsoft.AspNetCore.Identity.UI": "3.1.1"
         },
         "compile": {
           "bin/placeholder/LambdaForums.Service.dll": {}

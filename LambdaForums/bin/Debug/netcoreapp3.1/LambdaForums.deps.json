@@ -2268,7 +2268,8 @@
       },
       "LambdaForums.Service/1.0.0": {
         "dependencies": {
-          "LambdaForums.Data": "1.0.0"
+          "LambdaForums.Data": "1.0.0",
+          "Microsoft.AspNetCore.Identity.UI": "3.1.1"
         },
         "runtime": {
           "LambdaForums.Service.dll": {}

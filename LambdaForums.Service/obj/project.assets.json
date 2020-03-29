@@ -5309,7 +5309,8 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "LambdaForums.Data >= 1.0.0"
+      "LambdaForums.Data >= 1.0.0",
+      "Microsoft.AspNetCore.Identity.UI >= 3.1.1"
     ]
   },
   "packageFolders": {
@@ -5352,6 +5353,12 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Identity.UI": {
+            "target": "Package",
+            "version": "[3.1.1, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",
