@@ -42,7 +42,8 @@ namespace LambdaForums
                 options.Password.RequireUppercase = false;
                 options.Password.RequiredLength = 6;
 
-            }).AddEntityFrameworkStores<ApplicationDbContext>();
+            }).AddRoles<IdentityRole>()
+                .AddEntityFrameworkStores<ApplicationDbContext>();
 
             services.AddScoped<IForum, ForumService>();
             services.AddScoped<IPost, PostService>();
