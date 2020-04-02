@@ -28,7 +28,7 @@ namespace LambdaForums.Controllers
                     Id = forum.Id,
                     Name = forum.Title,
                     Description = forum.Description
-            });
+                });
 
             var model = new ForumIndexModel
             {

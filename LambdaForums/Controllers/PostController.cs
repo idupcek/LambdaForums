@@ -65,7 +65,6 @@ namespace LambdaForums.Controllers
                 ForumId = forum.Id,
                 ForumImageUrl = forum.ImageUrl,
                 AuthorName = User.Identity.Name
-
             };
 
             return View(model);
