@@ -62,7 +62,7 @@ for details on configuring this project to bundle and minify static web assets. 
 
 .frontPageHeading {
     font-size: 3.2em;
-    margin:16px; 0;
+    margin:16px 0;
 }
 
 .frontPageSubHeading {
@@ -208,14 +208,14 @@ for details on configuring this project to bundle and minify static web assets. 
 /* Custom Buttons*/
 .btn-back {
     background-color: #555;
-    color: #fff; !important;
+    color: #fff !important;
     transition: ease-in 0.1s;
     border-radius: 0px !important;
 }
 
 .btn-back:hover {
     transition:ease-in 0.1s;
-    background-color: #1E88E5 !important''
+    background-color: #1E88E5 !important;
 }
 
 .btn-newReply {
