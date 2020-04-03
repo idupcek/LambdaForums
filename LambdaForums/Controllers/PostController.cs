@@ -71,6 +71,7 @@ namespace LambdaForums.Controllers
         }
 
         [HttpPost]
+
         public async Task<IActionResult> AddPost (NewPostModel model)
         {
             var userId = _userManager.GetUserId(User);
