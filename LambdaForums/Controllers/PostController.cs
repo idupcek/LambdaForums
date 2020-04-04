@@ -86,9 +86,9 @@ namespace LambdaForums.Controllers
 
             await _postService.Add(post);
 
+            //Implementation  User Rating Management 
             await _userService.UpdateUserRating(userId, typeof(Post));
 
-            //TODO: Implement User Rating Management here
 
             return RedirectToAction("Index", "Post", new {id = post.Id });
         }
