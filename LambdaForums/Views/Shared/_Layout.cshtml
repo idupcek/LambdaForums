@@ -72,14 +72,20 @@
                             <ul class="dropdown-menu">
                                 <li role="separator" class="dropdown-divider"></li>
                                 <li class="dropdown-header">Profile</li>
-                                <li><a asp-controller="Profile" asp-action="Detail" asp-route-id="@UserManager.GetUserId(User)" class="nav-link text-dark">My Profile</a></li>
-                                @if (User.IsInRole("Admin"))
-                                {
+                                <li>
+                                    <a asp-controller="Profile" 
+                                       asp-action="Detail" 
+                                       asp-route-id="@UserManager.GetUserId(User)" class="nav-link text-dark navOption">
+                                         My Profile
+                                    </a>
+                                </li>
+                                @*@if (User.IsInRole("Admin"))
+                                {*@
                                     <li role="separator" class="dropdown-divider"></li>
                                     <li class="dropdown-header">Admin</li>
-                                    <li><a asp-controller="Forum" asp-action="Create">Create Forum</a></li>
-                                    <li><a asp-controller="Profile" asp-action="Index">View Users</a></li>
-                                }
+                                    <li><a asp-controller="Forum" asp-action="Create" class="nav-link text-dark navOption">Create Forum</a></li>
+                                    <li><a asp-controller="Profile" asp-action="Index" class="nav-link text-dark navOption">View Users</a></li>
+                                @*}*@
                             </ul>
                         </li>
                     }
