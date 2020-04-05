@@ -34,16 +34,29 @@ namespace LambdaForums
                     Configuration.GetConnectionString("DefaultConnection")));
 
 
-            services.AddDefaultIdentity<ApplicationUser>(options => 
-            {
+            //services.AddDefaultIdentity<ApplicationUser>(options => 
+            //{
+            //    options.SignIn.RequireConfirmedAccount = false;
+            //    options.Password.RequireDigit = false;
+            //    options.Password.RequireNonAlphanumeric = false;
+            //    options.Password.RequireUppercase = false;
+            //    options.Password.RequiredLength = 6;
+
+            //})
+            //    .AddRoles<IdentityRole>()
+            //    .AddEntityFrameworkStores<ApplicationDbContext>();
+
+            services.AddIdentity<ApplicationUser, IdentityRole>( options => {
                 options.SignIn.RequireConfirmedAccount = false;
                 options.Password.RequireDigit = false;
                 options.Password.RequireNonAlphanumeric = false;
                 options.Password.RequireUppercase = false;
                 options.Password.RequiredLength = 6;
-
-            }).AddRoles<IdentityRole>()
-                .AddEntityFrameworkStores<ApplicationDbContext>();
+            })
+            .AddRoleManager<RoleManager<IdentityRole>>()
+            .AddEntityFrameworkStores<ApplicationDbContext>()
+            .AddDefaultUI()
+            .AddDefaultTokenProviders();
 
             services.AddScoped<IForum, ForumService>();
             services.AddScoped<IPost, PostService>();
@@ -51,14 +64,14 @@ namespace LambdaForums
             services.AddScoped<IApplicationUser, ApplicationUserService>();
             services.AddSingleton(Configuration);
 
-            services.AddTransient<DataSeeder>();
+            //services.AddTransient<DataSeeder>();
 
             services.AddControllersWithViews();
             services.AddRazorPages();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, DataSeeder dataSeeder)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env/*, DataSeeder dataSeeder*/)
         {
             if (env.IsDevelopment())
             {
@@ -72,7 +85,7 @@ namespace LambdaForums
                 app.UseHsts();
             }
 
-            dataSeeder.SeedSuperUser();
+            //dataSeeder.SeedSuperUser();
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
