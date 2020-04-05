@@ -3,6 +3,7 @@ using LambdaForums.Data.Models;
 using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
+using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,13 +25,19 @@ namespace LambdaForums.Service
 
         public IEnumerable<ApplicationUser> GetAll()
         {
-            throw new NotImplementedException();
+
+            var users = _context.ApplicationUsers;
+
+            return users;
+
         }
 
         public ApplicationUser GetById(string id)
         {
-            return _userManager.Users.FirstOrDefault(
+            var result = _userManager.Users;
+            var model = result.FirstOrDefault(
                 user => user.Id == id);
+            return model;
         }
 
         public async Task UpdateUserRating(string userId, Type type)

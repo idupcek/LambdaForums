@@ -20,11 +20,13 @@
                 <a asp-controller="Profile" asp-action="Detail" asp-route-id="@Model.AuthorId">
                     @Model.AuthorName
                 </a>
-                <span class="postData">@Model.Created</span>
+                <span class="postDate">@Model.Created</span>
+
                 @if (Model.IsAuthorAdmin)
                 {
                     <span class="isAdmin smaller">Admin</span>
                 }
+
             </div>
             <div class="col-md-9 postContentContainer">
                 <div class="postContent">
@@ -37,7 +39,7 @@
 
         @if (User.Identity.IsAuthenticated)
         {
-            <div>
+            <div class="row" id="postReplyRow">
                 <span>
                     <a asp-controller="Reply" asp-action="Create" asp-route-id="@Model.Id" class="btn-newReply ">
                         Post Reply
@@ -61,7 +63,7 @@
                             <div class="isAdmin smaller">Admin</div>
                             <br />
                         }
-                        <span>@reply.Created</span>
+                        <span class="postDate">@reply.Created</span>
                     </div>
                     <div class="col-md-9 replyContentContainer">
                         <div class="postContent">

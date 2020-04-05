@@ -38,6 +38,11 @@ for details on configuring this project to bundle and minify static web assets. 
     padding: 16px 0 16px 0;
 }
 
+#replyDivider {
+    height: 2px;
+    margin-bottom: 12px;
+}
+
 .sectionInfo {
     height: 400px;
     background-color: white;
@@ -147,7 +152,7 @@ for details on configuring this project to bundle and minify static web assets. 
 .postDate {
     color: #888;
     font-family: 'Roboto Mono';
-    font-size: 0.8em;
+    font-size: 0.8em; 
 }
 
 .postLogo {
@@ -361,6 +366,81 @@ btn-file:hover {
     background-color: #fff;
     padding: 24px;
 }
+
+.authorBlock {
+    padding: 18px;
+    border: 1px dashed #00AFCF;
+    margin-bottom: 8px;
+}
+
+.noBorder {
+    border:none;
+}
+
+
+
+/* User Profile Index */
+.userProfilePic {
+    height: 140px;
+    width: 140px;
+    background-size:100%;
+}
+
+#userProfileImage {
+    background-size: 100%;
+}
+
+/*to implement wherever we have profile image instead of abouce id and class*/
+.fillSquare {
+    background-size: 100%;
+}
+
+/* Replies */
+.replyContent {
+    display: table;
+    background-color: #fff;
+    border-bottom: 1px solid #aaa;
+    width: inherit;
+}
+
+#postReplyRow {
+    background-color: #3F51B5;
+    padding: 8px;
+}
+
+.ReplyContentContainer, .replyAuthorContainer {
+    display: table-cell;
+    padding: 12px;
+}
+
+.isAdmin{
+    display:inline-block;
+    padding: 3px;
+    background-color: #FFEB3B;
+    font-family: 'Roboto Mono';
+}
+
+.smaller{
+    font-size: 0.8em;
+}
+
+#originalPost {
+    background-color: #fff;
+    padding: 12px;
+    margin-bottom: 8px;
+}
+
+.hasRecentPost {
+    padding: 2px;
+    background-color: #fe552f;
+    color: white;
+    text-align: center;
+    border-radius: 1px;
+    width: 30px;
+}
+
+
+
 
 #userEmailLabel, #userBioLabel, #userCreatedLabel, #userRating, #userActiveLabel {
     display:block; 

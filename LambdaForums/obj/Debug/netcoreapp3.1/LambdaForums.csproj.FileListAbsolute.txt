@@ -164,7 +164,6 @@ C:\VisualStudio Projects\ASP.NET Core path\Youtube\Wes Doyle - Forums\LambdaForu
 C:\VisualStudio Projects\ASP.NET Core path\Youtube\Wes Doyle - Forums\LambdaForums\LambdaForums\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
 C:\VisualStudio Projects\ASP.NET Core path\Youtube\Wes Doyle - Forums\LambdaForums\LambdaForums\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
 C:\VisualStudio Projects\ASP.NET Core path\Youtube\Wes Doyle - Forums\LambdaForums\LambdaForums\obj\Debug\netcoreapp3.1\Razor\Views\Post\Create.cshtml.g.cs
-C:\VisualStudio Projects\ASP.NET Core path\Youtube\Wes Doyle - Forums\LambdaForums\LambdaForums\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout - Copy.cshtml.g.cs
 C:\VisualStudio Projects\ASP.NET Core path\Youtube\Wes Doyle - Forums\LambdaForums\LambdaForums\obj\Debug\netcoreapp3.1\Razor\Views\Search\Results.cshtml.g.cs
 C:\VisualStudio Projects\ASP.NET Core path\Youtube\Wes Doyle - Forums\LambdaForums\LambdaForums\obj\Debug\netcoreapp3.1\Razor\Views\Profile\Detail.cshtml.g.cs
 C:\VisualStudio Projects\ASP.NET Core path\Youtube\Wes Doyle - Forums\LambdaForums\LambdaForums\obj\Debug\netcoreapp3.1\Razor\Views\Profile\Index.cshtml.g.cs
