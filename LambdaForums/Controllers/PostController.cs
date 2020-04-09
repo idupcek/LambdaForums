@@ -1,14 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using LambdaForums.Data;
+﻿using LambdaForums.Data;
 using LambdaForums.Data.Models;
 using LambdaForums.Models.Post;
 using LambdaForums.Models.Reply;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -18,7 +18,7 @@ namespace LambdaForums.Controllers
     {
         private readonly IPost _postService;
         private readonly IForum _forumService;
-        private static UserManager<ApplicationUser> _userManager;
+        private readonly UserManager<ApplicationUser> _userManager;
         private readonly IApplicationUser _userService;
 
         public PostController(
@@ -59,8 +59,17 @@ namespace LambdaForums.Controllers
             return View(model);
         }
 
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> Delete (int postId, int forumId)
+        {
+
+            await _postService.Delete(postId);
+            return RedirectToAction("Topic", "Forum", new { id = forumId });
+            
+        }
+
         [Authorize]
-        public IActionResult Create (int id) 
+        public IActionResult Create(int id)
         {
             //Note id is Forum.Id
             var forum = _forumService.GetById(id);

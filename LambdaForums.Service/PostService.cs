@@ -1,5 +1,6 @@
 ﻿using LambdaForums.Data;
 using LambdaForums.Data.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -30,9 +31,46 @@ namespace LambdaForums.Service
             await _context.SaveChangesAsync();
         }
 
-        public Task Delete(int id)
+        public async Task Delete(int id)
         {
-            throw new NotImplementedException();
+
+            var post = GetById(id);
+            
+            foreach(var reply in post.Replies)
+            {
+                _context.PostReplies.Remove(reply);
+            }
+            _context.Remove(post);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task DeleteForumPosts(Forum forum)
+        {
+            foreach (var post in forum.Posts)
+            {
+                await DeletePostReplies(post);
+                _context.Remove(post);
+            }
+            
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task DeletePostReplies(Post post)
+        {
+            foreach (var reply in post.Replies)
+            {
+                _context.Remove(reply);
+            }
+
+            await _context.SaveChangesAsync();
+        }
+
+
+        public async Task DeleteReply(int id)
+        {
+            var reply = _context.PostReplies.FirstOrDefault(r=> r.Id == id);
+            _context.PostReplies.Remove(reply);
+            await _context.SaveChangesAsync();
         }
 
         public Task EditPostContent(int id, string newContent)
@@ -68,9 +106,10 @@ namespace LambdaForums.Service
 
         public IEnumerable<Post> GetFilteredPosts(string searchQuery)
         {
+            var normalized = searchQuery.ToLower();
             return GetAll().Where(post 
-                => post.Title.Contains(searchQuery)
-                || post.Content.Contains(searchQuery));
+                => post.Title.ToLower().Contains(normalized)
+                || post.Content.ToLower().Contains(normalized));
         }
 
         public IEnumerable<Post> GetLatestPosts(int n)

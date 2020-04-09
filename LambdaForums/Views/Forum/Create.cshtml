@@ -3,7 +3,14 @@
 <div class="container body-content">
     <div class="row sectionHeader">
         <div class="sectionHeading">
-            Create New Forum
+            @if(Model.ForumId > 0)
+            {
+            <p>Edit the @Model.Title Forum</p>
+            }
+            else
+            {
+                <p>Create new forum</p>
+            }
         </div>
     </div>
     <div class="row">
@@ -28,6 +35,7 @@
                     </label>
                     <button type="submit" id="newFormBtn">Create Forum</button>
                 </div>
+                <input asp-for="ForumId" type="hidden" />
             </form>
         </div>
     </div>

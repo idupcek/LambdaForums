@@ -2,18 +2,21 @@
 for details on configuring this project to bundle and minify static web assets. */
 
 /* custom styling below */
+a {
+    text-decoration: none !important;
+}
 .navbar {
     box-shadow: 0 5px 4px -6px #000;
 }
 
 .navLogo {
-    background-image: url("../images/app-logo-s.jpg");
+    background-image: url("../images/theme/forumLogo.png");
     background-size: 100%;
     background-repeat: no-repeat;
     padding-right: 16px;
-    width: 150px;
+    width: 40px;
     margin-right: 12px;
-
+    background-size: cover;
 }
 
 .sectionHeader {
@@ -63,6 +66,7 @@ for details on configuring this project to bundle and minify static web assets. 
 
 .sectionDescription {
     color: #EEE;
+    width: 100%;
 }
 
 .frontPageHeading {
@@ -87,7 +91,7 @@ for details on configuring this project to bundle and minify static web assets. 
     background: rgba(0,0,0,0.1);
     padding: 8px;
     border: 0px;
-    height: 1.8em;
+    height: 1.5em;
     font-size: 2.1em;
     font-family: 'Roboto Mono';
     font-weight: bold;
@@ -106,6 +110,7 @@ for details on configuring this project to bundle and minify static web assets. 
 .frontPageContent {
     background-color: rgba(255, 255, 255, 0.9);
     padding: 16px;
+    margin-top: 15px;
 }
 
 #latestsPost {
@@ -113,7 +118,6 @@ for details on configuring this project to bundle and minify static web assets. 
     font-weight:bold;
     color: #333;
     margin: 4px 0 16px 0;
-
 }
 
 /* Forum Topic Page */
@@ -210,6 +214,14 @@ for details on configuring this project to bundle and minify static web assets. 
     float: right;
 }
 
+#deleteSpan {
+
+}
+
+#confirmDeleteSpan {
+
+}
+
 /* Custom Buttons*/
 .btn-back {
     background-color: #555;
@@ -281,6 +293,9 @@ btn-file:hover {
     font: inherit;
 }
  
+.btn-deleteHover:hover {
+    cursor: pointer;
+}
 
 /* Forum Index*/
 #forumIndexTable td {
@@ -321,6 +336,8 @@ btn-file:hover {
     background-color: #ddd;
     border: 1px solid #555;
     background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .forumPostCount {
@@ -344,6 +361,8 @@ btn-file:hover {
     text-align: center;
     padding-top: 30px;
     font-family: 'Roboto Mono';
+    background-color: white;
+    opacity: 0.8;
 }
 
 
@@ -472,9 +491,12 @@ a.navbar-brand {
     word-break: break-all;
 }
 
+
+
+
 /* Provide sufficient contrast against white background */
 a {
-  color: #0366d6;
+    color: #0366d6;
 }
 
 .btn-primary {

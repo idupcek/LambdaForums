@@ -12,6 +12,7 @@ namespace LambdaForums.Data
         Forum GetById(int id);
         IEnumerable<Forum> GetAll();
         Task Create(Forum forum);
+        Task UpdateForum(Forum forum);
         Task Delete(int forumId);
         Task UpdateForumTitle(int forumId, string newTitle);
         Task UpdateForumDescription(int forumId, string newDescription);

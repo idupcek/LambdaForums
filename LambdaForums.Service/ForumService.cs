@@ -22,10 +22,16 @@ namespace LambdaForums.Service
             await _context.SaveChangesAsync();
         }
 
+        public async Task UpdateForum(Forum forum)
+        {
+            _context.Update(forum);
+            await _context.SaveChangesAsync();
+        }
+
         public async Task Delete(int forumId)
         {
             var forum = GetById(forumId);
-            _context.Remove(forum);
+           _context.Remove(forum);
             await _context.SaveChangesAsync();
 
         }

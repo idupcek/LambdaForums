@@ -95,10 +95,27 @@ namespace LambdaForums.Controllers
         }
 
         [Authorize(Roles = "Admin")]
-        public IActionResult Create ()
+        public IActionResult Create (int? forumId)
         {
-            var model = new AddForumModel();
-            return View(model);
+            if (forumId.HasValue)
+            {
+                var forum = _forumService.GetById((int)forumId);
+
+                var model = new AddForumModel
+                {
+                    ForumId = forum.Id,
+                    Title = forum.Title, 
+                    Description = forum.Description, 
+                    ImageUrl = forum.ImageUrl
+                };
+
+                return View(model);
+            }
+            else
+            {
+                var model = new AddForumModel();
+                return View(model);
+            }
         }
 
         [Authorize(Roles = "Admin")]
@@ -106,6 +123,7 @@ namespace LambdaForums.Controllers
         [HttpPost]
         public async Task<IActionResult> AddForum(AddForumModel model)
         {
+
             //set default image for the new forums
             var imageUri = "/images/users/default.png";
 
@@ -117,15 +135,39 @@ namespace LambdaForums.Controllers
 
             var forum = new Forum
             {
+                Id = model.ForumId,
                 Title = model.Title,
                 Description = model.Description,
                 Created = DateTime.Now,
                 ImageUrl = imageUri
             };
 
-            await _forumService.Create(forum);
+            if (forum.Id > 0)
+            {
+                await _forumService.UpdateForum(forum);
+            }
+            else
+            {
+                await _forumService.Create(forum);
+            }
+
             return RedirectToAction("Index", "Forum");
         }
+
+        public async Task<IActionResult> Delete (int forumId)
+        {
+            await DeleteForumPosts(forumId);
+            await _forumService.Delete(forumId);
+            return RedirectToAction("Index", "Forum");
+        }
+
+        private async Task<Forum> DeleteForumPosts (int forumId)
+        {
+            var forum = _forumService.GetById(forumId);
+            await _postService.DeleteForumPosts(forum);
+            return forum;
+        }
+
 
         private CloudBlockBlob UploadForumImage(IFormFile file)
         {
@@ -139,6 +181,7 @@ namespace LambdaForums.Controllers
             return blockBlob;
         }
 
+        //below does not have any purpose really
         private ForumListingModel BuildForumListing(Post post)
         {
             var forum = post.Forum;
@@ -158,4 +201,10 @@ namespace LambdaForums.Controllers
         }
     }
 }
+
+
+
+
+
+
 

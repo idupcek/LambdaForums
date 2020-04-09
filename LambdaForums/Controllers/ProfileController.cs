@@ -36,6 +36,7 @@ namespace LambdaForums.Controllers
 
         public IActionResult Detail(string id)
         {
+            
             var user = _userService.GetById(id);
             var userRoles = _userManager.GetRolesAsync(user).Result;
 
@@ -83,7 +84,22 @@ namespace LambdaForums.Controllers
         [Authorize (Roles = "Admin")]
         public IActionResult Index ()
         {
-             var profiles = _userService.GetAll()
+            //var profiles = new List<ProfileModel>();
+
+            //foreach (var user in _userManager.Users.ToList())
+            //{
+            //    profiles.Add(new ProfileModel()
+            //    {
+            //        Email = user.Email,
+            //        UserName = user.UserName,
+            //        ProfileImageUrl = user.ProfileImageUrl,
+            //        UserRating = user.Rating.ToString(),
+            //        MemberSince = user.MemberSince
+            //    });
+            //}
+
+
+            var profiles = _userService.GetAll()
                 .OrderByDescending(user => user.Rating)
                 .Select(u => new ProfileModel
                 {
@@ -91,7 +107,7 @@ namespace LambdaForums.Controllers
                     UserName = u.UserName,
                     ProfileImageUrl = u.ProfileImageUrl,
                     UserRating = u.Rating.ToString(),
-                    MemberSince = u.MemberSince,
+                    MemberSince = u.MemberSince
                 });
 
             var model = new ProfileListModel

@@ -1,0 +1,9 @@
+C:\VisualStudio Projects\ASP.NET Core path\Youtube\Wes Doyle - Forums\LambdaForums\LambdaForums.Tests\bin\Debug\netcoreapp3.1\LambdaForums.Tests.deps.json
+C:\VisualStudio Projects\ASP.NET Core path\Youtube\Wes Doyle - Forums\LambdaForums\LambdaForums.Tests\bin\Debug\netcoreapp3.1\LambdaForums.Tests.dll
+C:\VisualStudio Projects\ASP.NET Core path\Youtube\Wes Doyle - Forums\LambdaForums\LambdaForums.Tests\obj\Debug\netcoreapp3.1\LambdaForums.Tests.AssemblyInfoInputs.cache
+C:\VisualStudio Projects\ASP.NET Core path\Youtube\Wes Doyle - Forums\LambdaForums\LambdaForums.Tests\obj\Debug\netcoreapp3.1\LambdaForums.Tests.AssemblyInfo.cs
+C:\VisualStudio Projects\ASP.NET Core path\Youtube\Wes Doyle - Forums\LambdaForums\LambdaForums.Tests\obj\Debug\netcoreapp3.1\LambdaForums.Tests.csprojAssemblyReference.cache
+C:\VisualStudio Projects\ASP.NET Core path\Youtube\Wes Doyle - Forums\LambdaForums\LambdaForums.Tests\bin\Debug\netcoreapp3.1\NUnit3.TestAdapter.dll
+C:\VisualStudio Projects\ASP.NET Core path\Youtube\Wes Doyle - Forums\LambdaForums\LambdaForums.Tests\bin\Debug\netcoreapp3.1\NUnit3.TestAdapter.pdb
+C:\VisualStudio Projects\ASP.NET Core path\Youtube\Wes Doyle - Forums\LambdaForums\LambdaForums.Tests\bin\Debug\netcoreapp3.1\nunit.engine.dll
+C:\VisualStudio Projects\ASP.NET Core path\Youtube\Wes Doyle - Forums\LambdaForums\LambdaForums.Tests\bin\Debug\netcoreapp3.1\nunit.engine.api.dll

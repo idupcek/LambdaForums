@@ -85,5 +85,11 @@ namespace LambdaForums.Controllers
                 User = user
             };
         }
+         
+        public async Task<IActionResult> DeleteReply (int replyId, int postId)
+        {
+            await _postService.DeleteReply(replyId);
+            return RedirectToAction("Index", "Post", new { id =postId });
+        }
     }
 }
