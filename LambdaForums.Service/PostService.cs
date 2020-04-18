@@ -86,6 +86,7 @@ namespace LambdaForums.Service
                 .Include(post => post.Forum);
         }
 
+
         public Post GetById(int id)
         {
             return _context.Posts.Where(post => post.Id == id)

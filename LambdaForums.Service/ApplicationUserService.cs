@@ -25,7 +25,7 @@ namespace LambdaForums.Service
 
         public IEnumerable<ApplicationUser> GetAll()
         {
-            var users = _userManager.Users;
+            var users = _context.Users.ToList();
 
             return users;
 

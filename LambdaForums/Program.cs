@@ -19,10 +19,7 @@ namespace LambdaForums
             var host = CreateHostBuilder(args).Build();
 
             try
-            
-            
             {
-
                 var scope = host.Services.CreateScope();
 
                 var ctx = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();

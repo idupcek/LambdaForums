@@ -71,6 +71,7 @@ namespace LambdaForums.Controllers
         [Authorize]
         public IActionResult Create(int id)
         {
+            
             //Note id is Forum.Id
             var forum = _forumService.GetById(id);
 
